@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Moved — China 2026</title>
+<link rel="canonical" href="https://pbranfield-lab.github.io/china-2026/" />
+<meta name="robots" content="noindex" />
+<!-- No-JS fallback. Sends to the site root rather than the deep path, which is
+     the best a static meta refresh can do; the script below does better. -->
+<meta http-equiv="refresh" content="3; url=https://pbranfield-lab.github.io/china-2026/" />
+<style>
+  body{
+    margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+    background:#161110;color:#efe4cc;text-align:center;padding:1.5rem;
+    font-family:Georgia,'Times New Roman',serif;
+  }
+  .card{max-width:34rem;}
+  .seal{
+    width:64px;height:64px;margin:0 auto 1.2rem;border-radius:3px;
+    background:linear-gradient(150deg,#a8393a,#8f2a2c);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.6rem;color:#efe4cc;
+  }
+  h1{font-size:1.5rem;margin:0 0 .6rem;color:#e8c876;}
+  p{color:#cbbb96;line-height:1.6;margin:0 0 1.2rem;font-size:.95rem;}
+  a.go{
+    display:inline-block;padding:.6rem 1.2rem;border-radius:3px;
+    background:linear-gradient(150deg,#e8c876,#c9a24a);color:#161110;
+    text-decoration:none;font-weight:700;font-family:system-ui,sans-serif;font-size:.9rem;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="seal">中</div>
+    <h1>This site has moved</h1>
+    <p>It's now called <strong>China 2026</strong>. Taking you there&nbsp;now&hellip;</p>
+    <p><a class="go" id="go" href="https://pbranfield-lab.github.io/china-2026/">Go to China 2026 →</a></p>
+  </div>
+<script>
+/* Forward to the same page under the new repo name, preserving any sub-path,
+   query string and hash — so an old deep link like
+   .../forbidden-city-maisie/map.html?trip=xian&loc=pit-1
+   lands on the matching page rather than dumping the reader on the home page.
+   This file is also served as 404.html, which is what catches those deep paths:
+   GitHub Pages serves 404.html for any path that isn't a real file. */
+(function(){
+  var OLD_BASE = "/forbidden-city-maisie/";
+  var NEW_ROOT = "https://pbranfield-lab.github.io/china-2026/";
+  var path = location.pathname;
+  var rest = path.indexOf(OLD_BASE) === 0 ? path.slice(OLD_BASE.length) : "";
+  // Never let a stray "/" produce a double slash in the new URL.
+  rest = rest.replace(/^\/+/, "");
+  var target = NEW_ROOT + rest + location.search + location.hash;
+  var link = document.getElementById("go");
+  if(link) link.href = target;
+  // replace() rather than assign() so Back doesn't bounce between old and new.
+  location.replace(target);
+})();
+</script>
+</body>
+</html>
